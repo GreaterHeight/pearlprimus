@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /downloads/internal/
+
+Sitemap: https://pearlprimus.oagroupng.com/sitemap.xml
+
+Host: pearlprimus.oagroupng.com

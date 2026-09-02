@@ -1,2 +1,536 @@
-<h1>PEARL PRIMUS MULTIPURPOSE CONTRACTING LIMITED<br />
-Site Maintanance Mode </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearl Primus Multipurpose Contracting Ltd — Delivering Contracts. Facilitating Projects. Creating Commercial Value. | Nigeria</title>
+  <meta name="description" content="Nigerian contracting and project facilitation — contract administration, project management, investment management, and commercial ventures. BPP registered. A member of OA Group Nigeria.">
+  <link rel="canonical" href="https://pearlprimus.oagroupng.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pearl Primus Multipurpose Contracting Ltd — Delivering Contracts. Facilitating Projects.">
+  <meta property="og:description" content="Nigerian contracting and project facilitation — contract administration, investment management, and commercial ventures. BPP registered.">
+  <meta property="og:url" content="https://pearlprimus.oagroupng.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/animations.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <style>
+    .hero{min-height:100vh;background:linear-gradient(160deg,var(--pp-navy-deep) 0%,var(--pp-navy) 50%,var(--pp-navy-mid) 100%);display:flex;align-items:center;padding-top:var(--nav-height);position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 40%,rgba(0,196,236,0.07),transparent),radial-gradient(ellipse 40% 50% at 10% 80%,rgba(0,196,236,0.04),transparent);}
+    /* Grid pattern overlay */
+    .hero::after{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,196,236,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,196,236,0.04) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+    .hero__inner{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 1fr;gap:var(--sp-16);align-items:center;width:100%;max-width:var(--max-width);margin:0 auto;padding:var(--sp-16) var(--gutter);}
+    .hero__eyebrow{font-family:var(--font-label);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--pp-cyan);display:block;margin-bottom:var(--sp-5);}
+    .hero__headline{font-family:var(--font-display);font-size:clamp(3rem,5.5vw,5.5rem);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:var(--sp-6);}
+    .hero__headline strong{display:block;font-weight:400;color:var(--pp-cyan);}
+    .hero__divider{width:48px;height:2px;background:var(--pp-cyan);margin-bottom:var(--sp-6);}
+    .hero__sub{font-family:var(--font-body);font-size:var(--text-xl);color:rgba(255,255,255,0.6);font-weight:300;line-height:1.7;max-width:46ch;margin-bottom:var(--sp-8);}
+    .hero__creds{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-bottom:var(--sp-10);}
+    .hero__actions{display:flex;gap:var(--sp-4);flex-wrap:wrap;}
+    /* Right panel */
+    .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-4);}
+    .hero-stat{background:rgba(255,255,255,0.04);border:1px solid rgba(0,196,236,0.15);border-radius:var(--radius-lg);padding:var(--sp-6) var(--sp-5);}
+    .hero-stat--accent{background:rgba(0,196,236,0.08);border-color:rgba(0,196,236,0.3);}
+    .hero-stat--span{grid-column:span 2;}
+    .hero-stat__num{font-family:var(--font-display);font-size:clamp(var(--text-3xl),3vw,var(--text-4xl));font-weight:300;color:var(--white);line-height:1;margin-bottom:var(--sp-1);}
+    .hero-stat__label{font-family:var(--font-label);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--pp-cyan);margin-bottom:var(--sp-1);}
+    .hero-stat__desc{font-family:var(--font-body);font-size:var(--text-sm);color:rgba(255,255,255,0.4);line-height:1.5;}
+    /* Metric bar */
+    .metric-bar{background:var(--pp-navy);border-top:1px solid rgba(0,196,236,0.12);padding:var(--sp-6) 0;}
+    .metric-bar__inner{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-4);text-align:center;}
+    .metric-item__num{font-family:var(--font-display);font-size:var(--text-4xl);font-weight:300;color:var(--white);line-height:1;}
+    .metric-item__label{font-family:var(--font-label);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--pp-cyan);margin-top:var(--sp-1);}
+    /* filter tab style (reuse) */
+    .filter-tab{font-family:var(--font-label);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;padding:0.5rem 1.25rem;border-radius:var(--radius-full);border:1px solid var(--grey-200);background:var(--white);color:var(--grey-600);cursor:pointer;transition:all var(--duration-fast);}
+    .filter-tab:hover{border-color:var(--pp-navy);color:var(--pp-navy);}
+    .filter-tab.active{background:var(--pp-navy);border-color:var(--pp-navy);color:var(--white);}
+    @media(max-width:1024px){.hero__inner{grid-template-columns:1fr;}.hero__stats{grid-template-columns:1fr 1fr;}.metric-bar__inner{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:768px){.hero-stat--span{grid-column:span 1;}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Pearl Primus Multipurpose Contracting Ltd",
+    "description": "Nigerian contracting and project facilitation company providing contract administration, project facilitation, investment management, and commercial ventures. BPP registered.",
+    "url": "https://pearlprimus.oagroupng.com",
+    "telephone": "+2348061650349",
+    "email": "info@pearlprimus.oagroupng.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "4, Aderoju Adewuyi Street, Off Alfred Olaiya Street, Opebi-Ikeja",
+      "addressLocality": "Lagos",
+      "addressRegion": "Lagos State",
+      "addressCountry": "NG"
+    },
+    "memberOf": { "@type": "Organization", "name": "OA Group Nigeria", "url": "https://oagroupng.com" },
+    "areaServed": "Nigeria",
+    "serviceType": ["Contract Administration", "Project Facilitation", "Investment Management", "Commercial Ventures"]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" aria-label="Pearl Primus home">
+        <span class="nav__logo-name">Pearl Primus Contracting Ltd</span>
+        <span class="nav__logo-sub">A Member of OA Group Nigeria</span>
+      </a>
+      <div class="nav__links">
+        <a href="/" class="nav__link nav__link--active">Home</a>
+        <a href="/services/" class="nav__link">Services</a>
+        <a href="/projects/" class="nav__link">Projects</a>
+        <a href="/sectors/" class="nav__link">Sectors</a>
+        <a href="/prequalification/" class="nav__link">Prequalification</a>
+        <a href="/contact/" class="nav__link">Contact</a>
+      </div>
+      <a href="/prequalification/#profile" class="nav__profile">⬇ Download Profile</a>
+      <a href="/contact/" class="nav__cta">Submit Tender Enquiry</a>
+      <button class="nav__hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="/" class="nav__link">Home</a>
+    <a href="/services/" class="nav__link">Services</a>
+    <a href="/projects/" class="nav__link">Projects</a>
+    <a href="/sectors/" class="nav__link">Sectors</a>
+    <a href="/prequalification/" class="nav__link">Prequalification</a>
+    <a href="/contact/" class="nav__link">Contact</a>
+    <a href="/prequalification/#profile" class="nav__profile" style="margin-top:var(--sp-4);">⬇ Download Company Profile</a>
+    <a href="/contact/" class="nav__cta" style="margin-top:var(--sp-3);">Submit Tender Enquiry</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__inner">
+        <div>
+          <span class="hero__eyebrow">Contracting · Project Facilitation · Commercial Ventures · Nigeria</span>
+          <h1 class="hero__headline">
+            Delivering Contracts.<br>
+            <strong>Facilitating Projects.</strong><br>
+            Creating Commercial Value.
+          </h1>
+          <div class="hero__divider" aria-hidden="true"></div>
+          <p class="hero__sub">A Nigerian multipurpose contracting firm providing contract administration, project facilitation, investment management, and commercial ventures — across government, private sector, and institutional clients.</p>
+
+          <!-- BPP + CAC credentials -->
+          <div class="hero__creds">
+            <span class="cert-badge cert-badge--bpp">
+              <span class="cert-badge__dot"></span>
+              <!-- IMPORTANT: Replace with confirmed BPP registration number before launch -->
+              BPP Registered · [BPP REG: XXXXXX]
+            </span>
+            <span class="cert-badge cert-badge--cac">
+              <span class="cert-badge__dot"></span>
+              CAC: [CAC: RC-XXXXXX]
+            </span>
+            <span class="cert-badge cert-badge--tax">
+              <span class="cert-badge__dot"></span>
+              Tax Clearance: [Current]
+            </span>
+          </div>
+
+          <div class="hero__actions">
+            <a href="/contact/" class="btn btn-cyan">Submit Tender Enquiry</a>
+            <a href="/prequalification/#profile" class="btn btn-outline">⬇ Download Company Profile</a>
+          </div>
+        </div>
+
+        <!-- Right stats panel -->
+        <div class="hero__stats" aria-hidden="true">
+          <div class="hero-stat hero-stat--accent">
+            <div class="hero-stat__num">[X]<sup style="font-size:0.5em;vertical-align:super;color:var(--pp-cyan);">+</sup></div>
+            <div class="hero-stat__label">Projects Completed</div>
+            <div class="hero-stat__desc">Across government, private, and institutional sectors</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat__num">₦[X]<sup style="font-size:0.5em;vertical-align:super;color:var(--pp-cyan);">bn</sup></div>
+            <div class="hero-stat__label">Contract Value</div>
+            <div class="hero-stat__desc">Total managed contract portfolio</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat__num">[X]</div>
+            <div class="hero-stat__label">Sectors Served</div>
+            <div class="hero-stat__desc">Government · Oil & Gas · Construction · NGO · Commercial</div>
+          </div>
+          <div class="hero-stat hero-stat--accent">
+            <div class="hero-stat__num">[X]<sup style="font-size:0.5em;vertical-align:super;color:var(--pp-cyan);">+</sup></div>
+            <div class="hero-stat__label">Years Active</div>
+            <div class="hero-stat__desc">Nigerian contracting experience</div>
+          </div>
+          <div class="hero-stat hero-stat--span">
+            <div class="hero-stat__label">Registered & Compliant</div>
+            <div style="font-family:var(--font-body);font-size:var(--text-base);color:rgba(255,255,255,0.6);line-height:1.65;margin-top:var(--sp-2);">
+              <!-- IMPORTANT: Replace all placeholders with confirmed registration numbers -->
+              Bureau of Public Procurement (BPP) · [BPP REG: XXXXXX] · CAC: [CAC: RC-XXXXXX] · Tax Clearance · OA Group Nigeria Member
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CAPABILITY METRIC BAR ── -->
+    <div class="metric-bar" aria-label="Capability metrics">
+      <div class="container">
+        <div class="metric-bar__inner">
+          <div><div class="metric-item__num">[X]<sup style="font-size:0.5em;color:var(--pp-cyan);">+</sup></div><div class="metric-item__label">Projects</div></div>
+          <div><div class="metric-item__num">[X]</div><div class="metric-item__label">Sectors</div></div>
+          <div><div class="metric-item__num">₦[X]bn</div><div class="metric-item__label">Contracts Managed</div></div>
+          <div><div class="metric-item__num">[X]<sup style="font-size:0.5em;color:var(--pp-cyan);">+</sup></div><div class="metric-item__label">Client Organisations</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SERVICES ── -->
+    <section class="section section--lg" aria-label="Capability areas">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--sp-12);">
+          <span class="section-label reveal">Capability Areas</span>
+          <h2 class="section-title reveal reveal--delay-1" style="margin:0 auto var(--sp-4);">Four commercial capability domains</h2>
+          <p class="lead reveal reveal--delay-2" style="margin:0 auto;text-align:center;">Pearl Primus operates across four capability areas — each constituting a distinct commercial service offering for Nigerian government, private sector, and institutional clients.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-card__icon">📋</div>
+            <h3 class="service-card__name">Contract Administration</h3>
+            <p class="service-card__desc">End-to-end contract management for Nigerian government and private sector clients — from tender response preparation through award, execution oversight, variation management, and final account settlement. We manage the administrative and commercial lifecycle of contracts so clients and principals can focus on delivery.</p>
+            <div class="service-card__tags"><span class="service-tag">Tender Preparation</span><span class="service-tag">Contract Management</span><span class="service-tag">Variation Orders</span><span class="service-tag">Final Accounts</span><span class="service-tag">BPP Compliance</span></div>
+            <a href="/services/" class="service-card__link">Explore Contract Admin <span>→</span></a>
+          </div>
+          <div class="service-card reveal reveal--delay-1">
+            <div class="service-card__icon">🏗️</div>
+            <h3 class="service-card__name">Project Facilitation</h3>
+            <p class="service-card__desc">Project facilitation for complex, multi-party Nigerian projects — coordinating stakeholders, managing project interfaces, navigating regulatory requirements, and ensuring delivery against scope, budget, and timeline. Particularly suited to government-funded and donor-funded project environments where coordination complexity is highest.</p>
+            <div class="service-card__tags"><span class="service-tag">Stakeholder Coordination</span><span class="service-tag">Regulatory Navigation</span><span class="service-tag">PMU Support</span><span class="service-tag">Donor-Funded Projects</span><span class="service-tag">Interface Management</span></div>
+            <a href="/services/" class="service-card__link">Explore Project Facilitation <span>→</span></a>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-card__icon">📈</div>
+            <h3 class="service-card__name">Investment Management</h3>
+            <p class="service-card__desc">Commercial investment management for contracting and venture opportunities — structuring joint ventures, managing investment portfolios within commercial contracting contexts, and creating commercially structured participation models for institutional investors seeking exposure to Nigerian contracting markets.</p>
+            <div class="service-card__tags"><span class="service-tag">Joint Ventures</span><span class="service-tag">Investment Structuring</span><span class="service-tag">Commercial Portfolio</span><span class="service-tag">Institutional Participation</span></div>
+            <a href="/services/" class="service-card__link">Explore Investment Management <span>→</span></a>
+          </div>
+          <div class="service-card reveal reveal--delay-1">
+            <div class="service-card__icon">🤝</div>
+            <h3 class="service-card__name">Commercial Ventures</h3>
+            <p class="service-card__desc">Structured commercial ventures — supply, distribution, and commercial facilitation within Nigerian markets. Pearl Primus identifies and executes commercial opportunities that combine our contracting and project management capabilities with commercial enterprise, creating value for both the company and its partners.</p>
+            <div class="service-card__tags"><span class="service-tag">Supply & Distribution</span><span class="service-tag">Commercial Facilitation</span><span class="service-tag">Partner Ventures</span><span class="service-tag">Market Entry</span></div>
+            <a href="/services/" class="service-card__link">Explore Commercial Ventures <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECTORS ── -->
+    <section class="section" style="background:var(--dark-bg);" aria-label="Sectors served">
+      <div class="container">
+        <div style="text-align:center;margin-bottom:var(--sp-12);">
+          <span class="section-label reveal">Sectors</span>
+          <h2 class="section-title section-title--light reveal reveal--delay-1" style="margin:0 auto var(--sp-4);">Where we operate</h2>
+          <p class="lead reveal reveal--delay-2" style="margin:0 auto;text-align:center;color:rgba(255,255,255,0.55);">Pearl Primus delivers across five sector domains — each with specific procurement frameworks, compliance requirements, and delivery characteristics that we navigate professionally.</p>
+        </div>
+        <div class="sectors-grid">
+          <div class="sector-card reveal">
+            <div class="sector-card__icon">🏛️</div>
+            <div class="sector-card__name">Government</div>
+            <p class="sector-card__desc">Federal and state government contracts — BPP framework, public procurement regulations, and government project delivery</p>
+          </div>
+          <div class="sector-card reveal reveal--delay-1">
+            <div class="sector-card__icon">⛽</div>
+            <div class="sector-card__name">Oil & Gas Support</div>
+            <p class="sector-card__desc">Contracting and supply chain support for oil and gas sector operations — procurement, contract administration, and project support</p>
+          </div>
+          <div class="sector-card reveal reveal--delay-2">
+            <div class="sector-card__icon">🏗️</div>
+            <div class="sector-card__name">Construction</div>
+            <p class="sector-card__desc">Construction project facilitation and contract administration for developers, contractors, and institutional clients</p>
+          </div>
+          <div class="sector-card reveal reveal--delay-3">
+            <div class="sector-card__icon">🌍</div>
+            <div class="sector-card__name">NGO & Development</div>
+            <p class="sector-card__desc">Project facilitation for international NGOs, donor agencies, and development finance institutions operating in Nigeria</p>
+          </div>
+          <div class="sector-card reveal reveal--delay-4">
+            <div class="sector-card__icon">🏢</div>
+            <div class="sector-card__name">Commercial</div>
+            <p class="sector-card__desc">Private sector commercial contracting, supply arrangements, and commercial ventures across Nigerian markets</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:var(--sp-10);">
+          <a href="/sectors/" class="btn btn-outline">Explore Our Sector Capability</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PROJECT PORTFOLIO ── -->
+    <section class="section section--lg" style="background:var(--off-white);" aria-label="Project portfolio">
+      <div class="container">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:var(--sp-8);flex-wrap:wrap;gap:var(--sp-4);">
+          <div>
+            <span class="section-label reveal">Project Portfolio</span>
+            <h2 class="section-title reveal reveal--delay-1" style="margin-bottom:0;">Selected engagements</h2>
+          </div>
+          <a href="/projects/" class="btn btn-secondary reveal">All Projects</a>
+        </div>
+
+        <!-- Filter tabs -->
+        <div style="display:flex;gap:var(--sp-2);flex-wrap:wrap;margin-bottom:var(--sp-8);" role="group" aria-label="Filter by sector">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="government">Government</button>
+          <button class="filter-tab" data-filter="oilgas">Oil & Gas</button>
+          <button class="filter-tab" data-filter="construction">Construction</button>
+          <button class="filter-tab" data-filter="ngo">NGO / Development</button>
+          <button class="filter-tab" data-filter="commercial">Commercial</button>
+        </div>
+
+        <!-- IMPORTANT: Replace all placeholder project cards with real project data before launch -->
+        <div style="background:rgba(0,196,236,0.06);border:1px solid rgba(0,196,236,0.2);border-radius:var(--radius-md);padding:var(--sp-4) var(--sp-5);margin-bottom:var(--sp-8);">
+          <p style="font-family:var(--font-body);font-size:var(--text-sm);color:var(--grey-600);line-height:1.65;"><strong>⚠ Client action required:</strong> Replace the placeholder project cards below with minimum 3 real completed or ongoing project entries before launch. Each project requires: project name, sector, approximate contract value (or range), client type, nature of engagement, and outcome. Exact client names may be anonymised per NDA.</p>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card reveal" data-sector="government">
+            <div class="project-card__header">
+              <div class="project-card__sector">Government · Federal</div>
+              <div class="project-card__name">[Project Name — Government Contract]</div>
+              <div class="project-card__value">Contract Value: ₦[XXX,XXX,XXX]</div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__desc">[Project description — nature of engagement (contract administration / project facilitation / procurement support), scope, and outcomes achieved. To be supplied by client. Client name may be anonymised per NDA.]</p>
+              <div class="project-card__meta">
+                <div class="project-card__meta-item"><strong>Client Type</strong>[Federal Ministry / State Agency]</div>
+                <div class="project-card__meta-item"><strong>Duration</strong>[X] months</div>
+                <div class="project-card__meta-item"><strong>Status</strong>Completed / Ongoing</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay-1" data-sector="oilgas">
+            <div class="project-card__header" style="background:linear-gradient(135deg,var(--pp-navy-deep),var(--pp-navy-mid));">
+              <div class="project-card__sector">Oil & Gas Support</div>
+              <div class="project-card__name">[Project Name — Oil & Gas Contract]</div>
+              <div class="project-card__value">Contract Value: ₦[XXX,XXX,XXX]</div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__desc">[Project description — nature of engagement, scope, and outcomes. To be supplied by client.]</p>
+              <div class="project-card__meta">
+                <div class="project-card__meta-item"><strong>Client Type</strong>[E&P Company / OML Operator]</div>
+                <div class="project-card__meta-item"><strong>Duration</strong>[X] months</div>
+                <div class="project-card__meta-item"><strong>Status</strong>Completed</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal reveal--delay-2" data-sector="ngo">
+            <div class="project-card__header" style="background:linear-gradient(135deg,#1E4A6E,var(--pp-navy));">
+              <div class="project-card__sector">NGO / Development</div>
+              <div class="project-card__name">[Project Name — Donor-Funded Project]</div>
+              <div class="project-card__value">Contract Value: $[XXX,XXX]</div>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__desc">[Project description — donor agency, project type, facilitation role, and delivery outcomes. To be supplied by client.]</p>
+              <div class="project-card__meta">
+                <div class="project-card__meta-item"><strong>Client Type</strong>[International NGO / Development Agency]</div>
+                <div class="project-card__meta-item"><strong>Duration</strong>[X] months</div>
+                <div class="project-card__meta-item"><strong>Status</strong>Completed</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align:center;margin-top:var(--sp-12);">
+          <a href="/projects/" class="btn btn-navy">View Full Project Portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PREQUALIFICATION SUMMARY ── -->
+    <section class="section" aria-label="Prequalification and compliance">
+      <div class="container">
+        <div class="two-col two-col--wide">
+          <div>
+            <span class="section-label reveal">Prequalification</span>
+            <h2 class="section-title reveal reveal--delay-1">Ready for tender. Documented and compliant.</h2>
+            <p class="section-body reveal reveal--delay-2" style="margin-bottom:var(--sp-8);">Pearl Primus maintains current prequalification documentation across key Nigerian procurement frameworks — enabling rapid response to tender invitations and expression of interest exercises from government, institutional, and private sector procurers.</p>
+            <div class="reveal reveal--delay-3">
+              <table class="preq-table">
+                <thead><tr><th>Document / Credential</th><th>Status</th><th>Reference</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>BPP Registration</td>
+                    <!-- IMPORTANT: Replace with confirmed BPP number or "Pending — [Application Date]" -->
+                    <td><span class="preq-status preq-status--available">Registered</span></td>
+                    <td>[BPP REG: XXXXXX]</td>
+                  </tr>
+                  <tr>
+                    <td>CAC Incorporation</td>
+                    <td><span class="preq-status preq-status--available">Registered</span></td>
+                    <td>RC: [CAC: RC-XXXXXX]</td>
+                  </tr>
+                  <tr>
+                    <td>Tax Clearance Certificate</td>
+                    <!-- IMPORTANT: Replace with current validity year -->
+                    <td><span class="preq-status preq-status--available">Current</span></td>
+                    <td>[Current Year] — FIRS</td>
+                  </tr>
+                  <tr>
+                    <td>ITF Certificate</td>
+                    <td><span class="preq-status preq-status--pending">Confirm Status</span></td>
+                    <td>[To be confirmed by client]</td>
+                  </tr>
+                  <tr>
+                    <td>PENCOM Certificate</td>
+                    <td><span class="preq-status preq-status--pending">Confirm Status</span></td>
+                    <td>[To be confirmed by client]</td>
+                  </tr>
+                  <tr>
+                    <td>NSITF Certificate</td>
+                    <td><span class="preq-status preq-status--pending">Confirm Status</span></td>
+                    <td>[To be confirmed by client]</td>
+                  </tr>
+                  <tr>
+                    <td>Company Profile (PDF)</td>
+                    <td><span class="preq-status preq-status--pending">Pending — supply content</span></td>
+                    <td><a href="/prequalification/#profile" style="color:var(--pp-cyan);">Download when available</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="margin-top:var(--sp-8);">
+              <a href="/prequalification/" class="btn btn-navy">Full Prequalification Page</a>
+            </div>
+          </div>
+
+          <!-- Download box -->
+          <div class="reveal reveal--delay-1">
+            <div class="download-box" id="profile">
+              <div style="font-family:var(--font-label);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--pp-cyan);margin-bottom:var(--sp-5);">Company Profile</div>
+              <div class="download-box__title">Pearl Primus<br>Company Profile PDF</div>
+              <div class="download-box__sub">Our company profile provides a comprehensive overview of Pearl Primus capabilities, sector experience, project portfolio, prequalification credentials, and company leadership — formatted for attachment to tender submissions and expression of interest responses.</div>
+              <!-- IMPORTANT: Replace #profile-placeholder with the actual PDF path when the company profile document is produced -->
+              <!-- Profile PDF must be prepared by the client and uploaded to the server -->
+              <a href="#profile-placeholder" class="btn btn-cyan" style="width:100%;justify-content:center;" onclick="return false;">
+                ⬇ Download Company Profile PDF
+              </a>
+              <!-- Remove the notice below when the PDF is uploaded -->
+              <div style="background:rgba(0,196,236,0.08);border:1px solid rgba(0,196,236,0.2);border-radius:var(--radius-sm);padding:var(--sp-4);margin-top:var(--sp-5);">
+                <p style="font-family:var(--font-body);font-size:var(--text-sm);color:rgba(255,255,255,0.5);line-height:1.65;">⚠ <strong style="color:rgba(255,255,255,0.7);">Pre-launch:</strong> Company profile PDF not yet produced. Client to supply profile content — or commission GreaterHeight Technologies to produce it from this build. Update the download link above with the actual file path before launch.</p>
+              </div>
+              <div class="download-box__meta">Format: PDF · [X] pages · Updated: [Date]</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CROSS-REFERRALS ── -->
+    <section style="padding-block:var(--sp-8);" aria-label="Group cross-referrals">
+      <div class="container" style="display:flex;flex-direction:column;gap:var(--sp-4);">
+        <div class="cross-referral reveal">
+          <p class="cross-referral__text">Need <strong>procurement management or contract strategy?</strong> Our sister company OA Consulting provides specialist procurement consulting, BPP compliance advisory, and procurement process optimisation.</p>
+          <a href="https://oaconsulting.oagroupng.com" class="btn btn-secondary" target="_blank" rel="noopener">OA Consulting Procurement →</a>
+        </div>
+        <div class="cross-referral reveal">
+          <p class="cross-referral__text">Need <strong>project financing or working capital?</strong> Maria Oyinlola Limited provides project financing, corporate credit, and financial advisory for Nigerian contracting and commercial projects.</p>
+          <a href="https://mol.oagroupng.com" class="btn btn-secondary" target="_blank" rel="noopener">MOL Project Finance →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__title reveal">Ready to work with Pearl Primus?</h2>
+        <p class="cta-banner__sub reveal reveal--delay-1">Submit a tender or RFQ enquiry, request our company profile, or register as a client or vendor. Our team responds to all qualified enquiries within one business day.</p>
+        <div class="cta-banner__actions reveal reveal--delay-2">
+          <a href="/contact/" class="btn btn-cyan">Submit Tender Enquiry</a>
+          <a href="/prequalification/#profile" class="btn btn-outline">⬇ Download Company Profile</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">Pearl Primus Multipurpose Contracting Ltd</div>
+          <div class="footer__brand-tag">Delivering Contracts. Facilitating Projects. Creating Commercial Value.</div>
+          <p class="footer__desc">Nigerian contracting, project facilitation, investment management, and commercial ventures. BPP registered. A member of OA Group Nigeria.</p>
+          <a href="https://oagroupng.com" class="footer__group-badge" target="_blank" rel="noopener">A Member of OA Group Nigeria</a>
+          <div class="footer__cac">RC: [CAC: RC-XXXXXX] · BPP: [BPP REG: XXXXXX]</div>
+        </div>
+        <div>
+          <div class="footer__col-title">Navigation</div>
+          <nav class="footer__links">
+            <a href="/" class="footer__link">Home</a>
+            <a href="/services/" class="footer__link">Services</a>
+            <a href="/projects/" class="footer__link">Projects</a>
+            <a href="/sectors/" class="footer__link">Sectors</a>
+            <a href="/prequalification/" class="footer__link">Prequalification</a>
+            <a href="/contact/" class="footer__link">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer__col-title">OA Group</div>
+          <nav class="footer__links">
+            <a href="https://oagroupng.com" class="footer__link" target="_blank" rel="noopener">OA Group Nigeria</a>
+            <a href="https://olusola-adekanola.oagroupng.com" class="footer__link" target="_blank" rel="noopener">Olusola Adekanola & Co</a>
+            <a href="https://oaconsulting.oagroupng.com" class="footer__link" target="_blank" rel="noopener">OA Consulting</a>
+            <a href="https://henrisol.oagroupng.com" class="footer__link" target="_blank" rel="noopener">Henrisol Properties</a>
+            <a href="https://mol.oagroupng.com" class="footer__link" target="_blank" rel="noopener">Maria Oyinlola Ltd</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <address style="font-style:normal;">
+            <p class="footer__contact-item">4, Aderoju Adewuyi Street,<br>Off Alfred Olaiya Street,<br>Opebi-Ikeja, Lagos State, Nigeria</p>
+            <p class="footer__contact-item"><a href="tel:+2348061650349" class="footer__link">+234 806 165 0349</a></p>
+            <p class="footer__contact-item"><a href="mailto:info@pearlprimus.oagroupng.com" class="footer__link">info@pearlprimus.oagroupng.com</a></p>
+          </address>
+          <div class="footer__socials">
+            <a href="https://linkedin.com/company/oagroupng" class="footer__social" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+            <a href="https://x.com/oagroupng" class="footer__social" aria-label="X" target="_blank" rel="noopener">𝕏</a>
+            <a href="https://instagram.com/oagroupng" class="footer__social" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2025 Pearl Primus Multipurpose Contracting Ltd. All rights reserved.</p>
+        <nav class="footer__legal">
+          <a href="/privacy/">Privacy Policy</a>
+          <a href="/terms/">Terms of Use</a>
+          <a href="/disclaimer/">Disclaimer</a>
+        </nav>
+        <p class="footer__dev">Designed & developed by GreaterHeight Technologies</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top" style="position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--pp-cyan);border:none;color:var(--pp-navy-deep);font-size:18px;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;z-index:500;cursor:pointer;font-weight:700;">↑</button>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <p class="cookie-banner__text">We use cookies. See our <a href="/privacy/" style="color:var(--pp-cyan);text-decoration:underline;">Privacy Policy</a>.</p>
+    <div class="cookie-banner__actions">
+      <button id="cookieAccept" class="btn btn-cyan" style="padding:0.5rem 1.25rem;font-size:11px;">Accept</button>
+      <button id="cookieDecline" class="btn btn-outline" style="padding:0.5rem 1.25rem;font-size:11px;">Decline</button>
+    </div>
+  </div>
+
+  <script src="/js/navigation.js" defer></script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
